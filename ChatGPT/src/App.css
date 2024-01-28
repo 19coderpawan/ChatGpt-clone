@@ -1,10 +1,15 @@
 *{
     padding:0;
     margin:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
 }
 body{
-    background: black;
+    background:rgb(3,0,31);
     color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container{
@@ -12,11 +17,16 @@ body{
 }
 
 /* Sidebar Styling  started here */
-
+.sidebarsection{
+    display: flex;
+    flex-direction: column;
+}
 .upperbody{
     margin:1rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    
 }
 .upperbody1{
     margin:1rem;
@@ -24,16 +34,18 @@ body{
     align-items: center;
     gap:1rem;
 }
+
 .newchat{
     display: flex;
     justify-content: center;
     gap:1rem;
     align-items: center;
     width:100%;
-    height:70px;
+    height:50px;
     background: aqua;
     color:white;
     border-radius:10px;
+    border:none;
 }
 .add{
     width:30px;
@@ -43,5 +55,19 @@ body{
     margin:1rem;
     display: flex;
     flex-direction: column;
-
+    gap:1rem;
+}
+.query{
+    display: flex;
+    gap:1rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding:9px;
+    width: 100%;
+    height: 50px;
+    color:white;
+    background: black;
+    border:1px solid white;
+    border-radius:7px;
+    
 }
