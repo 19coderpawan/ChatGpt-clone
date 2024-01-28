@@ -1,0 +1,47 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background: black;
+    color: white;
+}
+
+.container{
+    display: flex;
+}
+
+/* Sidebar Styling  started here */
+
+.upperbody{
+    margin:1rem;
+    display: flex;
+    flex-direction: column;
+}
+.upperbody1{
+    margin:1rem;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+.newchat{
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+    align-items: center;
+    width:100%;
+    height:70px;
+    background: aqua;
+    color:white;
+    border-radius:10px;
+}
+.add{
+    width:30px;
+}
+
+.upperbody2{
+    margin:1rem;
+    display: flex;
+    flex-direction: column;
+
+}
