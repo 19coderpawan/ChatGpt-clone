@@ -24,6 +24,7 @@ body{
     justify-content: flex-start;
     flex:3;
     border-right: 1px solid grey;
+    margin-bottom: 0;
 }
 .upperbody{
     display: flex;
@@ -133,6 +134,7 @@ body{
     display: flex;
     flex-direction: column;
     gap:2rem;
+    /* margin-bottom: 0; */
     /* flex:3; */
 }
 .home{
@@ -159,16 +161,53 @@ body{
     align-items: center;
     margin:6rem 10rem;
     flex:9;
+    margin-bottom: 0;
 }
 .chats{
     display:flex;
     flex-direction: column;
-    gap:2rem;
+    /* gap:1rem; */
+    
 }
 .chatsection{
     display: flex;
     flex-direction: row;
-    background-color:black;
+    margin:1rem;
+    padding:2rem 3rem;
+    font-size:1.2rem;
+    align-items: flex-start;
+    text-align: justify;
+    overflow: hidden;
+    width: 100%;
+    max-width: 70rem;
+    height:calc(100vh -17rem);
+    scroll-behavior: smooth;
+}
+.botsection{
+    background-color: rgba(28,30,58,1);
+    width: fit-content;
+    border-radius:1.2rem;
+}
+.userlogo{
+    height:40px;
+    margin-right: 1.5rem;
+    object-fit: cover;
+    border-radius:0.5rem;
+}
+.chatlogo{
+    height:40px;
+    margin-right: 1.5rem;
+    object-fit: cover;
+    border-radius:0.5rem;
+    animation: rotatechatlogo 5s infinite linear;
+}
+@keyframes rotatechatlogo{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg) ;
+    }
 }
 .footersection{
     width:100%;
