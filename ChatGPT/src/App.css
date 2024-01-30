@@ -57,7 +57,7 @@ body{
 .btn{
     display: flex;
     margin-left: 12px;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     border-bottom: 1px solid white;
 }
 .newchat{
@@ -132,7 +132,7 @@ body{
     border-top:1px solid grey;
     display: flex;
     flex-direction: column;
-    gap:3rem;
+    gap:2rem;
     /* flex:3; */
 }
 .home{
@@ -147,11 +147,67 @@ body{
     font-size:1.5rem;
 
 }
-
-
 /* Lower Body of the Sidebar styling ends here */
+
 /* Sidebar section styling ends here */
 
+/* Main Chat Section styling starts here */
 .mainbody{
+    min-height: calc(100vh - 14rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:6rem 10rem;
     flex:9;
 }
+.chats{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.chatsection{
+    display: flex;
+    flex-direction: row;
+    background-color:black;
+}
+.footersection{
+    width:100%;
+    margin-top:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.chatquery{
+   padding:0.5rem;
+   background: rgba(28,30,58,1);
+   display: flex;
+   width: 100%;
+   border-radius: 15px;
+}
+.chatquery>.inputfield, .sendbtn{
+    background: transparent;
+    border:none;
+}
+.inputfield{
+    outline:none;
+    padding:1.3rem;
+    width: 100%;
+    color:white;
+}
+.sendbtn{
+    cursor: pointer;
+    background-color: black;
+    border-radius: 20px;
+    border:none;
+    outline:none;
+}
+.sendbtn:active{
+    border-radius: 10px;
+    background-color: white;
+}
+.footersection{
+    display: flex;
+    gap:1rem;
+}
+/* Main Chat Section styling ends here */
