@@ -10,12 +10,77 @@ body{
     background:rgb(3,0,31);
     color: white;
     font-family: 'Poppins', sans-serif;
+    cursor: url(/src/assets/rocket.svg) auto;
 }
+
+@media only screen and (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      overflow: hidden;
+    }
+  
+     .sidebarsection{
+        border-bottom: 1px solid grey;
+     }
+     .lowerbody{
+        margin-bottom:20px;
+     }
+    .mainbody {
+      /* margin-left: 0; */
+      margin:0;
+      
+      /* flex:1; */
+      width:100%;
+      /* width: 100%; */
+     
+    }
+  
+    .chatsection {
+      padding: 1rem;
+      max-width: 70rem;
+    }
+  
+    .lowerbody {
+      padding-left: 2rem;
+    }
+  
+    /* You may need to adjust other styles accordingly for better responsiveness */
+  }
 
 .container{
     min-height: 100vh;
     display: flex;
+    gap:3rem;
 }
+
+
+/* sidebar btn styling */
+.openbtn{
+    display: flex;
+    cursor: pointer;
+    border:none;
+    height:50%;
+    border-radius:10px;
+    background-color:rgba(28,30,58,1);
+    color:white;
+    /* visibility: hidden; */
+}
+.closebtn{
+    display: flex;
+    cursor: pointer;
+    border:none;
+    height:50%;
+    border-radius:10px;
+    background-color:rgba(28,30,58,1);
+    color:white;
+    /* visibility: hidden; */
+}
+/* sidebar btn styling ends here */
+
+/* toogle bar functionality styling ends here */
+/* .sidebar-toggle-btn{
+    display: none;
+} */
 
 /* Sidebar Styling  started here */
 .sidebarsection{
@@ -159,9 +224,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin:6rem 10rem;
-    flex:9;
-    margin-bottom: 0;
+    overflow: hidden;
+    /* margin:6rem 10rem;
+    flex:9; */
+    /* margin-bottom: 0; */
 }
 .chats{
     display:flex;
@@ -179,7 +245,7 @@ body{
     text-align: justify;
     overflow: hidden;
     width: 100%;
-    max-width: 70rem;
+    /* max-width: 70rem; */
     height:calc(100vh -17rem);
     scroll-behavior: smooth;
 }
