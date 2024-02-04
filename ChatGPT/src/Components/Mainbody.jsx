@@ -1,6 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
+// import { SendMsgtoOpenAi } from '../OpenAi';
 
 const Mainbody = () => {
+  const [input,Setinput]=useState("");
+
+  const handlesendinput=async(e)=>{
+    e.preventDefault();
+
+    try {
+      const responseData = await fetch('/openai', {
+        method: 'POST',
+        body: JSON.stringify({ input }),
+      });
+
+      const data = await responseData.json();
+      setResponse(data.text);
+    } catch (error) {
+      console.error(error);
+      setResponse('Failed to generate text');
+    }
+  }
   return (
     <div className='mainbody'>
       <div className="chats">
@@ -15,8 +34,9 @@ const Mainbody = () => {
       </div>
       <div className="footersection">
         <div className="chatquery">
-          <input type="text" className="inputfield" placeholder='Message ChatGPT..........' />
-          <button className="sendbtn">
+          <input type="text" className="inputfield" placeholder='Message ChatGPT..........'
+          value={input} onChange={(e)=>{Setinput(e.target.value)}} />
+          <button className="sendbtn" onClick={handlesendinput}>
             <img src="/src/assets/send.svg" alt="" className="sendimg" />
           </button>
         </div>
